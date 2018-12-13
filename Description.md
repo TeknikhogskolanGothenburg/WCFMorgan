@@ -94,7 +94,9 @@ To access database stored procedures i've used Dapper for the project.
 
 ```SoapExceptions
 GlobalExceptionHandler with IErrorHandler interface implemented with simple logger.
-FaultExceptions is let through the GlobalExceptionHandler unchanged. The rest of all Exceptions are changed into FaultExceptions and passed on with default message to shield information to client.
+FaultExceptions is let through the GlobalExceptionHandler unchanged.
+The rest of all Exceptions are changed into FaultExceptions and passed on with default 
+message to shield information to client.
 The thought is to let none sensitive information out of the server.
 Most of the filtering exceptions and handling is found in.
 CarRentalService\CarRentalService.cs
@@ -107,8 +109,11 @@ When soap based host is run exceptions is logged into errors.txt.
 
 ```WebExceptions
 Since I didn't really make an GlobalExceptionHandler with IErrorInterface version for web exception.
-A simpler strategy was implemented with the same thought. Turn FaultExceptions and exceptions into WebFaultException and pass those on to the client side.
-All Exceptions that makes it to the last "Catch em all" (Catch(Exception ex)) is logged and throws a general less descriptive WebFaultException back to the client. This is also to shield from sensitive information passed on to the client.Most of the filtering exceptions handling is found in. CarRentalService\CarRentalRestService.cs
+A simpler strategy was implemented with the same thought. Turn FaultExceptions and exceptions into
+WebFaultException and pass those on to the client side.
+All Exceptions that makes it to the last "Catch em all" (Catch(Exception ex)) is logged and throws a general
+less descriptive WebFaultException back to the client. This is also to shield from sensitive information
+passed on to the client.Most of the filtering exceptions handling is found in. CarRentalService\CarRentalRestService.cs
 
 When web based host is run exceptions is logged into weberrors.txt.
 ```
