@@ -13,7 +13,7 @@
 
 ## Structure of the CarRental Project
 
-![Morgan Berglund WCF project Picture](MorganBerglundWCF.PNG?raw=true "Morgan Berglund WCF project")
+![Morgan Berglund WCF project Picture](https://github.com/TeknikhogskolanGothenburg/WCFMorgan/blob/master/MorganBerglundWCF.png?raw=true "Morgan Berglund WCF project")
 
 ## Details
 
