@@ -113,7 +113,8 @@ A simpler strategy was implemented with the same thought. Turn FaultExceptions a
 WebFaultException and pass those on to the client side.
 All Exceptions that makes it to the last "Catch em all" (Catch(Exception ex)) is logged and throws a general
 less descriptive WebFaultException back to the client. This is also to shield from sensitive information
-passed on to the client.Most of the filtering exceptions handling is found in. CarRentalService\CarRentalRestService.cs
+passed on to the client.Most of the filtering exceptions handling is found in.
+CarRentalService\CarRentalRestService.cs
 
 When web based host is run exceptions is logged into weberrors.txt.
 ```
