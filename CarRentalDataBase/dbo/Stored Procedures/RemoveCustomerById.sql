@@ -1,0 +1,6 @@
+﻿CREATE PROCEDURE RemoveCustomerById
+@Id INT
+AS
+BEGIN
+DELETE FROM dbo.Customer WHERE Id=@Id;
+END

@@ -1,0 +1,6 @@
+﻿CREATE PROCEDURE RemoveCarById
+@Id INT
+AS
+BEGIN
+DELETE FROM dbo.Car WHERE Id=@Id;
+END
